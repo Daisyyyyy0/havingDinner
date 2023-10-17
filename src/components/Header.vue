@@ -2,6 +2,8 @@
 import { computed, inject, reactive, ref } from 'vue'
 import { useRouter, useRoute } from "vue-router"
 import { Close } from '@element-plus/icons-vue'
+import { useMainStore } from '@/stores/index.js'
+import { MENU } from '@/config/login.js'
 
 
 const main = useMainStore()
@@ -26,6 +28,22 @@ const isMobile = inject('isMobile')
 const logout = () => {
     main.signOutAction()
 }
+
+//選單
+const NAV_LIST = [
+   {
+      label: '關於我們',
+   },
+   {
+      label: '最新消息',
+   },
+   {
+      label: '會員專區',
+   },
+   {
+      label: '共餐據點',
+   },
+]
 
 // 遊戲下拉事件
 function gameMenu(bool, label) {
@@ -75,8 +93,11 @@ init()
 </script>
 
 <template>
-   <div id="header">
-      <div class="left"><img src="./../../public/image/logo.png" alt=""></div>
+   <div id="header flex items-center justify-between">
+      <router-link to="/"><img class="cursor-pointer w-[200px]" src="/image/logo.png" /></router-link>
+      <router-link to = "/" class="text-xl color-[#333]"
+            v-for="(nav, index) in NAV_LIST" :key="index"
+      > {{nav.label}} </router-link>
    </div>
 </template>
 
