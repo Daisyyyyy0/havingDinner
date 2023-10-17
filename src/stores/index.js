@@ -1,10 +1,9 @@
 import { defineStore } from 'pinia'
 import { ElMessageBox } from 'element-plus'
-// import router from '@/router'
-import { userApi, walletApi, loginApi, infoApi } from '@/api/index'
-import i18n from '@/plugins/i18n.js'
+import router from '@/router'
+// import { userApi, walletApi, loginApi, infoApi } from '@/api/index'
+import i18n from '@/utils/i18n.js'
 import CryptoJS from '@/utils/crypto.js'
-import { ERROR_CODE } from '@/config/index.js'
 
 const { t } = i18n.global
 
