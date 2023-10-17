@@ -1,8 +1,8 @@
 import { createI18n } from 'vue-i18n'
-載入語言
-import tw from '@/lang/zh-TW.json'
-import cn from '@/lang/zh-CN.json'
-import en from '@/lang/en-US.json'
+// 載入語言
+// import tw from '@/lang/zh-TW.json'
+// import cn from '@/lang/zh-CN.json'
+// import en from '@/lang/en-US.json'
 
 const i18n = createI18n({
   legacy: false, //9.2.2版本不加會報錯
@@ -11,9 +11,9 @@ const i18n = createI18n({
   fallbackWarn: false,
   missingWarn: false,
   messages: {
-    'en-US': en,
-    'zh-TW': tw,
-    'zh-CN': cn,
+    // 'en-US': en,
+    // 'zh-TW': tw,
+    // 'zh-CN': cn,
   },
 })
 export default i18n

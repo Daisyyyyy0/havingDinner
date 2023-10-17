@@ -4,6 +4,7 @@ import { useMainStore } from './stores/index.js'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import { useI18n } from 'vue-i18n'
+import { inject, ref } from 'vue'
 
 // 裝置判斷
 const isMobile = inject('isMobile')

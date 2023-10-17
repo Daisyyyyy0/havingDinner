@@ -6,11 +6,11 @@ const isLogin = true
 
 export const routes = [
    // 首頁
-  //  {
-  //    path: '/',
-  //    name: 'index',
-  //    component: () => import('@/views/index.vue'),
-  //  },
+   {
+     path: '/',
+     name: 'index',
+     component: () => import('@/views/index.vue'),
+   },
    // 登入頁
   //  {
   //    path: '/login',
