@@ -83,7 +83,7 @@ const init = async() => {
             if (item.game_status !== 1) maintainGameID.value.push(item.game_id)
         })
     } catch(err) {
-        main.post('系統公告', main.error(err), '關閉', 'post', '')
+      //   main.post('系統公告', main.error(err), '關閉', 'post', '')
     }
 }
 
@@ -93,16 +93,26 @@ init()
 </script>
 
 <template>
-   <div id="header flex items-center justify-between">
-      <router-link to="/"><img class="cursor-pointer w-[200px]" src="/image/logo.png" /></router-link>
-      <router-link to = "/" class="text-xl color-[#333]"
-            v-for="(nav, index) in NAV_LIST" :key="index"
-      > {{nav.label}} </router-link>
+   <div id="header" class="flex items-center justify-between max-w-[100%] mx-[auto] py-[8px] px-[10px] bg-white shadow-[0_8px_5px_0_rgba(193,156,130,0.2)]" >
+      <div class="logo">
+         <router-link to="/"><img class="cursor-pointer w-[200px] ml-4" src="/image/logo.png" /></router-link>
+      </div>
+      <div class="nav-item flex justify-center  items-end">
+         <router-link to = "/" class="text-base text-[#DA7569] text-[16px] mx-1 px-1 hover:text-[##222] font-semibold"
+               v-for="(nav, index) in NAV_LIST" :key="index"
+         > {{nav.label}} 
+         </router-link>
+         <div class="login">
+            <router-link to="/"><img class="cursor-pointer ml-2 mr-2 w-[30px] fill-[#DA7569]" src="/image/login.svg" /></router-link>
+         </div>
+      </div>
+
    </div>
 </template>
 
-
 <style lang="scss" scoped>
+#header{
 
+}
 
 </style>

@@ -26,7 +26,7 @@ locale.value = localStorage.getItem('locale')
 <template>
    <Header/>
 
-   <Footer v-if="!route.meta.nonFooter" />
+   <Footer/>
 
 </template>
 

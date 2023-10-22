@@ -12,8 +12,8 @@ router.beforeEach((to, from, next) => {
 
   // 判斷頁面是否須先登入。
   if (to.meta.isLogin && !localStorage.getItem('token')) {
-    main.post('系統公告', '請先登入', '關閉', 'post', '/login')
-    next({ name: 'index' })
+    // main.post('系統公告', '請先登入', '關閉', 'post', '/login')   先不要打開
+    // next({ name: 'index' })
     return false
   }
 
