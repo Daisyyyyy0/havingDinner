@@ -5,6 +5,10 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import { useI18n } from 'vue-i18n'
 import { inject, ref } from 'vue'
+import "@popperjs/core";
+import "bootstrap";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 // 裝置判斷
 const isMobile = inject('isMobile')
@@ -20,16 +24,23 @@ const mainApp = ref(null)
 localStorage.getItem('locale') ? localStorage.getItem('locale') : localStorage.setItem('locale', 'zh-TW')
 locale.value = localStorage.getItem('locale')
 
+// export default {
+//   mounted () {
+    AOS.init()
+//   }
+// }
 
 </script>
 
 <template>
    <Header/>
-
+      <div class="h-full">
+         <RouterView />
+      </div>
    <Footer/>
 
 </template>
 
-<style scoped>
+<style lang="scss">
 
 </style>

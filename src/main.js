@@ -2,6 +2,9 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import './style.css'
+// import "@popperjs/core";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
 import App from './App.vue'
 import router from './router'
 
