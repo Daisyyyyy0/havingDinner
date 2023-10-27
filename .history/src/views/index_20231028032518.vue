@@ -116,7 +116,7 @@
                </div>
             </div>
       </div> -->
-      <div class="container container1">
+      <div class="container pl-[10]">
             <div class="row">
                <div class="col-8 news">
                   <div class="news-box">最新消息</div>

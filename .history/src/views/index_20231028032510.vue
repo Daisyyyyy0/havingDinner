@@ -52,7 +52,7 @@
       </div>
    </section>
    <!-- 功能介紹 -->
-   <section class="choice py-[4rem]">
+   <section class="choice p-[4rem]">
       <div class="max-w-[1140px] relative flex flex-col justify-center items-center">
 
             <div class="mt-[4rem] mb-[3rem] text-[#222]">

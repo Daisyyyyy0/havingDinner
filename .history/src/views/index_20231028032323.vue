@@ -52,7 +52,7 @@
       </div>
    </section>
    <!-- 功能介紹 -->
-   <section class="choice py-[4rem]">
+   <section class="choice px-[4rem]">
       <div class="max-w-[1140px] relative flex flex-col justify-center items-center">
 
             <div class="mt-[4rem] mb-[3rem] text-[#222]">
@@ -86,7 +86,7 @@
    </section>
 
    <!-- 平台資訊 -->
-   <section class="information py-[4rem] text-[#222]">
+   <section class="information  text-[#222]">
       <!-- rwd小於1300px -->
       <!-- <div class="container container0">
             <div class="row">
