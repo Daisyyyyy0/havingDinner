@@ -178,25 +178,22 @@
       </div>
       <div class="w-full mx-auto px-[12px] 2xl:max-w-[1320px] xl:max-w-[95%] lg:max-w-[90%] md:max-w-[720px] sm:max-w-[540px] container2">
             <div class="flex flex-wrap max-w-full">
-               <div class="rules w-1/3 px-[12px] flex text-[24px] font-bold relative">
-                  <div class="relative flex flex-col justify-evenly">
-                     <div class="bg-[#EEC7AE]/75 w-[65px] h-[100px] flex items-center price">收費標準</div>
-                     <div class=" bg-[#EEC7AE]/75 w-[65px] h-[100px] flex items-center time">搭伙時段</div>
-                  </div>
-
-                  <div class="rules_context bg-[#EAA69D] w-full text-center flex flex-col items-center grow">
-                        <div class="rules_price text-center flex flex-col items-center pt-[40px] pb-[26px] mb-[26px] w-[75%]" style="border-bottom: 2px rgb(95, 85, 85) solid">
+               <div class="rules w-1/3 px-[12px] flex items-start text-[24px] font-bold">
+                  <div class="bg-[#EEC7AE] w-[65px] h-full flex flex-col justify-center items-center price">收費標準</div>
+                  <div class="bg-[#EEC7AE] w-[65px] h-full flex flex-col justify-center items-center time">搭伙時段</div>
+                  <div class="rules-context">
+                        <div class="rules_price bg-[#EAA69D] w-full t" style="border-bottom: 2px rgb(95, 85, 85) solid">
                            <p>依店家規定</p>
                            <p>收費範圍在50~120元間</p>
                         </div>
-                        <div class="rules_time flex flex-col gap-y-2.5 mb-[40px]">
-                           <div class="rules-time1 flex gap-x-2.5">
+                        <div class="rules-time">
+                           <div class="rules-time1">
                               <div>中午時段</div>
                               <div class="white-box">11</div>
                               <div class="white-box">~</div>
                               <div class="white-box">13</div>
                            </div>
-                           <div class="rules-time1 flex gap-x-2.5">
+                           <div class="rules-time1">
                               <div>晚間時段</div>
                               <div class="white-box">17</div>
                               <div class="white-box">~</div>
@@ -332,12 +329,8 @@
             font-weight: bold;
          }
       }
-      .rules{
-         .white-box {
-            background-color: #E5E5E5;
-            width: 53px;
-            border-radius: 5px;
-         }
-      }   
+      .rules_price{
+
+      }
    }
 </style>

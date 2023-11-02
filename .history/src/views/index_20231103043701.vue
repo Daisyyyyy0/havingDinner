@@ -184,7 +184,7 @@
                      <div class=" bg-[#EEC7AE]/75 w-[65px] h-[100px] flex items-center time">搭伙時段</div>
                   </div>
 
-                  <div class="rules_context bg-[#EAA69D] w-full text-center flex flex-col items-center grow">
+                  <div class="rules_context bg-[#EAA69D] w-full text-center  flex flex-col items-center">
                         <div class="rules_price text-center flex flex-col items-center pt-[40px] pb-[26px] mb-[26px] w-[75%]" style="border-bottom: 2px rgb(95, 85, 85) solid">
                            <p>依店家規定</p>
                            <p>收費範圍在50~120元間</p>

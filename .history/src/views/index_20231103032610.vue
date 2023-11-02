@@ -117,12 +117,12 @@
             </div>
       </div> -->
       <div class=" w-full mx-auto px-[12px] 2xl:max-w-[1320px] xl:max-w-[95%] lg:max-w-[90%] md:max-w-[720px] sm:max-w-[540px] mt-[80px] relative">
-            <div class="flex flex-wrap max-w-full">
+            <div class="flex flex-wrap">
                <div class="w-2/3 px-[12px] flex items-start text-center text-[24px] ">
-                  <div class="flex items-center w-[90px] h-[100px] px-[10px]  absolute top-[-17.5%] left-[5%] font-bold bg-[#EEC7AE]/75">
+                  <div class="flex items-center w-[90px] h-[100px] px-[10px]  absolute top-[-15%] left-[5%] font-bold bg-[#EEC7AE]">
                      最新消息
                   </div>
-                  <div class="news_context py-[21px] flex justify-center items-center bg-[rgb(239,196,196)]/50 w-full">
+                  <div class="news_context py-[1rem] flex justify-center items-center bg-[rgb(239,196,196)]/50 w-full">
                         <table class="w-[80%] border-collapse">
                            <thead style="border-bottom: 1px #DA7569 solid" class="leading-[2.5]">
                               <tr>
@@ -177,26 +177,23 @@
             </div>
       </div>
       <div class="w-full mx-auto px-[12px] 2xl:max-w-[1320px] xl:max-w-[95%] lg:max-w-[90%] md:max-w-[720px] sm:max-w-[540px] container2">
-            <div class="flex flex-wrap max-w-full">
-               <div class="rules w-1/3 px-[12px] flex text-[24px] font-bold relative">
-                  <div class="relative flex flex-col justify-evenly">
-                     <div class="bg-[#EEC7AE]/75 w-[65px] h-[100px] flex items-center price">收費標準</div>
-                     <div class=" bg-[#EEC7AE]/75 w-[65px] h-[100px] flex items-center time">搭伙時段</div>
-                  </div>
-
-                  <div class="rules_context bg-[#EAA69D] w-full text-center flex flex-col items-center grow">
-                        <div class="rules_price text-center flex flex-col items-center pt-[40px] pb-[26px] mb-[26px] w-[75%]" style="border-bottom: 2px rgb(95, 85, 85) solid">
+            <div class="row row2">
+               <div class="col-4 rules">
+                  <div class="box price">收費標準</div>
+                  <div class="box time">搭伙時段</div>
+                  <div class="rules-context">
+                        <div class="rules-price" style="border-bottom: 2px rgb(95, 85, 85) solid">
                            <p>依店家規定</p>
                            <p>收費範圍在50~120元間</p>
                         </div>
-                        <div class="rules_time flex flex-col gap-y-2.5 mb-[40px]">
-                           <div class="rules-time1 flex gap-x-2.5">
+                        <div class="rules-time">
+                           <div class="rules-time1">
                               <div>中午時段</div>
                               <div class="white-box">11</div>
                               <div class="white-box">~</div>
                               <div class="white-box">13</div>
                            </div>
-                           <div class="rules-time1 flex gap-x-2.5">
+                           <div class="rules-time1">
                               <div>晚間時段</div>
                               <div class="white-box">17</div>
                               <div class="white-box">~</div>
@@ -332,12 +329,5 @@
             font-weight: bold;
          }
       }
-      .rules{
-         .white-box {
-            background-color: #E5E5E5;
-            width: 53px;
-            border-radius: 5px;
-         }
-      }   
    }
 </style>
