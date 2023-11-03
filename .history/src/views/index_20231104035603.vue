@@ -7,15 +7,12 @@ const MEMBER_LIST = [
    },
    {
       name: 'Aston',
-      photo: '/image/pic/member-pic2.png',
    },
    {
       name: 'Annie',
-      photo:'/image/pic/member-pic3.png'
    },
    {
       name: 'Daisy',
-      photo: '/image/pic/member-pic4.png',
    },
 ]
 
@@ -224,18 +221,28 @@ const MEMBER_LIST = [
                         </div>
                   </div>
                </div>
-               <!--團隊介紹-->
                <div class="w-2/3 flex text-[24px] font-bold member">
                   <div class="member_section bg-[#EEC7AE] w-full flex flex-col">
                         <div class="flex justify-center">
                            <div class="bg-[#E8DBCC] w-[150px] h-[45px] flex justify-center items-center mt-[15px] mb-[20px]">團隊介紹</div>
                         </div>
                         <div class="flex justify-evenly">
-                           <div class="member-card text-center" v-for="(member,index) in  MEMBER_LIST" :key="index">
-                              <img class="w-[150px] h-[150px] mb-[20px] align-middle" :src = member.photo alt="">
-                              <p>{{member.name}}</p>
+                           <div class="member-card text-center">
+                              <img class="w-[150px] h-[150px] mb-[20px] align-middle" src="/image/pic/member-pic1.png" alt="">
+                              <p>Mason</p>
                            </div>
-                          
+                           <div class="member-card">
+                              <img class="w-[150px] h-[150px] mb-[20px] align-middle" src="/image/pic/member-pic2.png" alt="">
+                              <p>Aston</p>
+                           </div>
+                           <div class="member-card">
+                              <img class="w-[150px] h-[150px] mb-[20px] align-middle" src="/image/pic/member-pic3.png" alt="">
+                              <p>Annie</p>
+                           </div>
+                           <div class="member-card">
+                              <img class="w-[150px] h-[150px] mb-[20px] align-middle" src="/image/pic/member-pic4.png" alt="">
+                              <p>Daisy</p>
+                           </div>
                         </div>
                   </div>
                </div>

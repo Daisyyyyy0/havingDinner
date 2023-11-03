@@ -231,6 +231,7 @@ const MEMBER_LIST = [
                            <div class="bg-[#E8DBCC] w-[150px] h-[45px] flex justify-center items-center mt-[15px] mb-[20px]">團隊介紹</div>
                         </div>
                         <div class="flex justify-evenly">
+                           
                            <div class="member-card text-center" v-for="(member,index) in  MEMBER_LIST" :key="index">
                               <img class="w-[150px] h-[150px] mb-[20px] align-middle" :src = member.photo alt="">
                               <p>{{member.name}}</p>

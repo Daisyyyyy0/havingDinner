@@ -1,23 +1,4 @@
 <script setup>
-//選單
-const MEMBER_LIST = [
-   {
-      name: 'Mason',
-      photo: '/image/pic/member-pic1.png',
-   },
-   {
-      name: 'Aston',
-      photo: '/image/pic/member-pic2.png',
-   },
-   {
-      name: 'Annie',
-      photo:'/image/pic/member-pic3.png'
-   },
-   {
-      name: 'Daisy',
-      photo: '/image/pic/member-pic4.png',
-   },
-]
 
 </script>
 <template>
@@ -224,18 +205,28 @@ const MEMBER_LIST = [
                         </div>
                   </div>
                </div>
-               <!--團隊介紹-->
                <div class="w-2/3 flex text-[24px] font-bold member">
                   <div class="member_section bg-[#EEC7AE] w-full flex flex-col">
                         <div class="flex justify-center">
                            <div class="bg-[#E8DBCC] w-[150px] h-[45px] flex justify-center items-center mt-[15px] mb-[20px]">團隊介紹</div>
                         </div>
                         <div class="flex justify-evenly">
-                           <div class="member-card text-center" v-for="(member,index) in  MEMBER_LIST" :key="index">
-                              <img class="w-[150px] h-[150px] mb-[20px] align-middle" :src = member.photo alt="">
-                              <p>{{member.name}}</p>
+                           <div class="member-card text-center">
+                              <img class="w-[150px] h-[150px] mb-[20px] align-middle" src="/image/pic/member-pic1.png" alt="">
+                              <p>Mason</p>
                            </div>
-                          
+                           <div class="member-card">
+                              <img class="w-[150px] h-[150px] mb-[20px] align-middle" src="/image/pic/member-pic2.png" alt="">
+                              <p>Aston</p>
+                           </div>
+                           <div class="member-card">
+                              <img class="w-[150px] h-[150px] mb-[20px] align-middle" src="/image/pic/member-pic3.png" alt="">
+                              <p>Annie</p>
+                           </div>
+                           <div class="member-card">
+                              <img class="w-[150px] h-[150px] mb-[20px] align-middle" src="/image/pic/member-pic4.png" alt="">
+                              <p>Daisy</p>
+                           </div>
                         </div>
                   </div>
                </div>
@@ -248,9 +239,9 @@ const MEMBER_LIST = [
       <div class="w-full mx-auto px-[12px] 2xl:max-w-[1320px] xl:max-w-[95%] lg:max-w-[90%] md:max-w-[720px] sm:max-w-[540px] mt-[80px] relative">
             <div class="text-[36px] font-bold mb-[4rem]">使用流程</div>
             <div class="flex flex-wrap max-w-full">
-               <div class="step col flex-[2_2_0%]">
-                  <div class="step-number flex">
-                        <img class="" src="/image/step-number1.png" alt="">
+               <div class="step col">
+                  <div class="step-number">
+                        <img class="w-[170px] h-[150px] mb-[20px]" src="/image/step-number1.png" alt="">
                   </div>
                   <div class="step-pic">
                         <img src="/image/step1.png" alt="">

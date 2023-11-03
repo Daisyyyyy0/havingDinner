@@ -1,23 +1,4 @@
 <script setup>
-//選單
-const MEMBER_LIST = [
-   {
-      name: 'Mason',
-      photo: '/image/pic/member-pic1.png',
-   },
-   {
-      name: 'Aston',
-      photo: '/image/pic/member-pic2.png',
-   },
-   {
-      name: 'Annie',
-      photo:'/image/pic/member-pic3.png'
-   },
-   {
-      name: 'Daisy',
-      photo: '/image/pic/member-pic4.png',
-   },
-]
 
 </script>
 <template>
@@ -195,7 +176,7 @@ const MEMBER_LIST = [
                </div>
             </div>
       </div>
-      <div class="mt-[0.75rem] w-full mx-auto px-[12px] 2xl:max-w-[1320px] xl:max-w-[95%] lg:max-w-[90%] md:max-w-[720px] sm:max-w-[540px] container2">
+      <div class="w-full mx-auto px-[12px] 2xl:max-w-[1320px] xl:max-w-[95%] lg:max-w-[90%] md:max-w-[720px] sm:max-w-[540px] container2">
             <div class="flex flex-wrap max-w-full">
                <div class="rules w-1/3 px-[12px] flex text-[24px] font-bold relative">
                   <div class="relative flex flex-col justify-evenly">
@@ -224,99 +205,34 @@ const MEMBER_LIST = [
                         </div>
                   </div>
                </div>
-               <!--團隊介紹-->
                <div class="w-2/3 flex text-[24px] font-bold member">
-                  <div class="member_section bg-[#EEC7AE] w-full flex flex-col">
-                        <div class="flex justify-center">
-                           <div class="bg-[#E8DBCC] w-[150px] h-[45px] flex justify-center items-center mt-[15px] mb-[20px]">團隊介紹</div>
+                  <div class="member-section bg-[#EEC7AE] w-full  flex-col">
+                        <div class="member-title-box">
+                           <div class="member-title">團隊介紹</div>
                         </div>
-                        <div class="flex justify-evenly">
-                           <div class="member-card text-center" v-for="(member,index) in  MEMBER_LIST" :key="index">
-                              <img class="w-[150px] h-[150px] mb-[20px] align-middle" :src = member.photo alt="">
-                              <p>{{member.name}}</p>
+                        <div class="member-context">
+                           <div class="member-card">
+                              <img src="./image/pic/member-pic1.png" alt="">
+                              <p>Mason</p>
                            </div>
-                          
+                           <div class="member-card">
+                              <img src="./image/pic/member-pic2.png" alt="">
+                              <p>Aston</p>
+                           </div>
+                           <div class="member-card">
+                              <img src="./image/pic/member-pic3.png" alt="">
+                              <p>Annie</p>
+                           </div>
+                           <div class="member-card">
+                              <img src="./image/pic/member-pic4.png" alt="">
+                              <p>Daisy</p>
+                           </div>
                         </div>
                   </div>
                </div>
             </div>
       </div>
    </section>
-
-   <!-- 使用流程 -->
-   <section class="how_to_use">
-      <div class="w-full mx-auto px-[12px] 2xl:max-w-[1320px] xl:max-w-[95%] lg:max-w-[90%] md:max-w-[720px] sm:max-w-[540px] mt-[80px] relative">
-            <div class="text-[36px] font-bold mb-[4rem]">使用流程</div>
-            <div class="flex flex-wrap max-w-full">
-               <div class="step col flex-[2_2_0%]">
-                  <div class="step-number flex">
-                        <img class="" src="/image/step-number1.png" alt="">
-                  </div>
-                  <div class="step-pic">
-                        <img src="/image/step1.png" alt="">
-                        <div class="step-text">
-                           <p> 註冊會員 </p>
-                           <p>填寫基本資料</p>
-                        </div>
-                  </div>
-                  <div class="step-arrow">
-                        <i class="fas fa-caret-right"></i>
-                  </div>
-               </div>
-               <div class="step col">
-                  <div class="step-number">
-                        <img src="/image/step-number2.png" alt="">
-                  </div>
-                  <div class="step-pic">
-                        <img src="/image/step2.png" alt="">
-                        <p>登入會員</p>
-                        <p>啟動後臺</p>
-                  </div>
-                  <div class="step-arrow">
-                        <i class="fas fa-caret-right"></i>
-                  </div>
-               </div>
-               <div class="step col">
-                  <div class="step-number">
-                        <img src="/image/step-number3.png" alt="">
-                  </div>
-                  <div class="step-pic">
-                        <img src="/image/step3.png" alt="">
-                        <p>搜尋店家</p>
-                        <p>選擇時段 </p>
-                  </div>
-                  <div class="step-arrow">
-                        <i class="fas fa-caret-right"></i>
-                  </div>
-               </div>
-               <div class="step col">
-                  <div class="step-number">
-                        <img src="/image/step-number4.png" alt="">
-                  </div>
-                  <div class="step-pic">
-                        <img src="/image/step4.png" alt="">
-                        <p>預約時間</p>
-                        <p>享用美食</p>
-                  </div>
-                  <div class="step-arrow">
-                        <i class="fas fa-caret-right"></i>
-                  </div>
-               </div>
-               <div class="step col">
-                  <div class="step-number">
-                        <img src="/image/step-number5.png" alt="">
-                  </div>
-                  <div class="step-pic">
-                        <img src="/image/step5.png" alt="">
-                        <p>選擇現金</p>
-                        <p>或綁定金流付款</p>
-                  </div>
-               </div>
-            </div>
-      </div>
-   </section>   
-
-
 </template>
 
 <style lang="scss" scoped>
@@ -423,12 +339,5 @@ const MEMBER_LIST = [
             border-radius: 5px;
          }
       }   
-   }
-
-   .how_to_use{
-      padding-top: 4rem;
-      background-image: url(../image/index_bg.png);
-      color: #333;
-      text-align: center;
    }
 </style>
