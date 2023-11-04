@@ -42,10 +42,10 @@ const  SOCIALMEDIA = [
       </div>
       <div class="flex flex-col justify-start text-white">
          <img src="/public/image/logo-fff.png" alt="">
-         <div class="flex flex-row justify-center">
-            <router-link to = "/" class="text-[16px] mx-1 hover:text-[##222] font-semibold"
+         <div>
+            <router-link to = "/" class="flex flex-row justify-start items-center text-[16px] mx-1 px-1 hover:text-[##222] font-semibold"
                v-for="(media, index) in SOCIALMEDIA" :key="index"> 
-               <img class="w-8 h-8 text-white" :src="media.item" alt=""> 
+               <img class="w-8 h-8 mr-2 text-white" :src="media.item" alt=""> 
             </router-link>
          </div>   
 
