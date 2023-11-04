@@ -288,7 +288,7 @@ const HOW_TO_USE = [
                   <div class="step-pic">
                         <img :src="step.img" alt="">
                         <div class="step-text">
-                           <p> {{ step.step }} </p>
+                           <p> {{ step.step}} </p>
                            <p>{{ step.action }}</p>
                         </div>
                   </div>

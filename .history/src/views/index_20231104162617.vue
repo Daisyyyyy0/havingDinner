@@ -24,7 +24,9 @@ const HOW_TO_USE = [
       img: '/image/step1.png',
       number: '/image/step-number1.png',
       step: '註冊會員',
-      action: '填寫基本資料',
+      action: '填寫基本資料
+
+',
    },
    {
       img: '/image/step2.png',
@@ -283,16 +285,59 @@ const HOW_TO_USE = [
             <div class="flex flex-wrap max-w-full">
                <div class="step col flex-[2_2_0%]" v-for="(step, index) in HOW_TO_USE"  :key="index">
                   <div class="step-number flex">
-                        <img class="" :src="step.number" alt="">
+                        <img class="" :src="step.img" alt="">
                   </div>
                   <div class="step-pic">
-                        <img :src="step.img" alt="">
+                        <img src="/image/step1.png" alt="">
                         <div class="step-text">
-                           <p> {{ step.step }} </p>
-                           <p>{{ step.action }}</p>
+                           <p> 註冊會員 </p>
+                           <p>填寫基本資料</p>
                         </div>
                   </div>
                   <img src="/image/svg/caret-right-fill.svg" alt="">
+               </div>
+               <div class="step col">
+                  <div class="step-number">
+                        <img src="/image/step-number2.png" alt="">
+                  </div>
+                  <div class="step-pic">
+                        <img src="/image/step2.png" alt="">
+                        <p>登入會員</p>
+                        <p>啟動後臺</p>
+                  </div>
+                  <img src="/image/svg/caret-right-fill.svg" alt="">
+               </div>
+               <div class="step col">
+                  <div class="step-number">
+                        <img src="/image/step-number3.png" alt="">
+                  </div>
+                  <div class="step-pic">
+                        <img src="/image/step3.png" alt="">
+                        <p>搜尋店家</p>
+                        <p>選擇時段 </p>
+                  </div>
+                  <img src="/image/svg/caret-right-fill.svg" alt="">
+               </div>
+               <div class="step col">
+                  <div class="step-number">
+                        <img src="/image/step-number4.png" alt="">
+                  </div>
+                  <div class="step-pic">
+                        <img src="/image/step4.png" alt="">
+                        <p>預約時間</p>
+                        <p>享用美食</p>
+                  </div>
+                  <img src="/image/svg/caret-right-fill.svg" alt="">
+               </div>
+               <div class="step col">
+                  <div class="step-number">
+                        <img src="/image/step-number5.png" alt="">
+                  </div>
+                  <div class="step-pic">
+                        <img src="/image/step5.png" alt="">
+                        <p>選擇現金</p>
+                        <p>或綁定金流付款</p>
+                  </div>
                </div>
             </div>
       </div>

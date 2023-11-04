@@ -23,32 +23,32 @@ const HOW_TO_USE = [
    {
       img: '/image/step1.png',
       number: '/image/step-number1.png',
-      step: '註冊會員',
-      action: '填寫基本資料',
+      step: '',
+      action: '',
    },
    {
-      img: '/image/step2.png',
-      number: '/image/step-number2.png',
-      step: '登入會員',
-      action: '啟動後臺',
+      img: '/image/step1.png',
+      number: '',
+      step: '',
+      action: '',
    },
    {
-      img: '/image/step3.png',
-      number: '/image/step-number3.png',
-      step: '搜尋店家',
-      action: '選擇時段',
+      img: '/image/step-number1.png',
+      number: '',
+      step: '',
+      action: '',
    },
    {
-      img: '/image/step4.png',
-      number: '/image/step-number4.png',
-      step: '預約時間',
-      action: '享用美食',
+      img: '/image/step-number1.png',
+      number: '',
+      step: '',
+      action: '',
    },
    {
-      img: '/image/step5.png',
-      number: '/image/step-number5.png',
-      step: '選擇現金',
-      action: '或綁定金流付款',
+      img: '/image/step-number1.png',
+      number: '',
+      step: '',
+      action: '',
    },
 ]
 
@@ -281,18 +281,61 @@ const HOW_TO_USE = [
       <div class="w-full mx-auto px-[12px] 2xl:max-w-[1320px] xl:max-w-[95%] lg:max-w-[90%] md:max-w-[720px] sm:max-w-[540px] mt-[80px] relative">
             <div class="text-[36px] font-bold mb-[4rem]">使用流程</div>
             <div class="flex flex-wrap max-w-full">
-               <div class="step col flex-[2_2_0%]" v-for="(step, index) in HOW_TO_USE"  :key="index">
+               <div class="step col flex-[2_2_0%]">
                   <div class="step-number flex">
-                        <img class="" :src="step.number" alt="">
+                        <img class="" src="/image/step-number1.png" alt="">
                   </div>
                   <div class="step-pic">
-                        <img :src="step.img" alt="">
+                        <img src="/image/step1.png" alt="">
                         <div class="step-text">
-                           <p> {{ step.step }} </p>
-                           <p>{{ step.action }}</p>
+                           <p> 註冊會員 </p>
+                           <p>填寫基本資料</p>
                         </div>
                   </div>
                   <img src="/image/svg/caret-right-fill.svg" alt="">
+               </div>
+               <div class="step col">
+                  <div class="step-number">
+                        <img src="/image/step-number2.png" alt="">
+                  </div>
+                  <div class="step-pic">
+                        <img src="/image/step2.png" alt="">
+                        <p>登入會員</p>
+                        <p>啟動後臺</p>
+                  </div>
+                  <img src="/image/svg/caret-right-fill.svg" alt="">
+               </div>
+               <div class="step col">
+                  <div class="step-number">
+                        <img src="/image/step-number3.png" alt="">
+                  </div>
+                  <div class="step-pic">
+                        <img src="/image/step3.png" alt="">
+                        <p>搜尋店家</p>
+                        <p>選擇時段 </p>
+                  </div>
+                  <img src="/image/svg/caret-right-fill.svg" alt="">
+               </div>
+               <div class="step col">
+                  <div class="step-number">
+                        <img src="/image/step-number4.png" alt="">
+                  </div>
+                  <div class="step-pic">
+                        <img src="/image/step4.png" alt="">
+                        <p>預約時間</p>
+                        <p>享用美食</p>
+                  </div>
+                  <img src="/image/svg/caret-right-fill.svg" alt="">
+               </div>
+               <div class="step col">
+                  <div class="step-number">
+                        <img src="/image/step-number5.png" alt="">
+                  </div>
+                  <div class="step-pic">
+                        <img src="/image/step5.png" alt="">
+                        <p>選擇現金</p>
+                        <p>或綁定金流付款</p>
+                  </div>
                </div>
             </div>
       </div>
