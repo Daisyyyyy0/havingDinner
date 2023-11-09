@@ -1,4 +1,10 @@
 <script setup>
+import Banner from '@/views/home/Banner.vue'
+import Swiper from '@/views/home/Swiper.vue'
+import Kitchen from '@/views/home/Kitchen.vue'
+import Partner from '@/views/home/Partner.vue'
+
+
 //選單
 const MEMBER_LIST = [
    {
@@ -54,29 +60,7 @@ const HOW_TO_USE = [
 
 </script>
 <template>
-   <section class="banner pt-[10rem] pb-[30rem]">
-      <div class="sticky flex justify-center items-center top-[200px] left-0">
-         <div class="text-[#222] z-[3]">
-            <p class="top-0" data-aos="fade-up" data-aos-duration="1500">是否燒著一手好菜的你，此刻找不到人和你一同分享?</p>
-            <p class="delay-500" data-aos="fade-up" data-aos-duration="1500">每天都不知道晚餐要吃什麼了嗎?</p>
-            <p class="delay-1000" data-aos="fade-up" data-aos-duration="1500">
-                覺得很孤單，想找回和家人一起吃飯的感覺嗎?</p>
-            <p class="delay-[1500ms]" data-aos="fade-up" data-aos-duration="1500">你想念媽媽的晚餐嗎？</p>
-        </div>
-        <div class="absolute z-[2] left-[10%] rotate-[-16deg]">
-            <img class="h-[196px]" src="/image/banner1.png" alt="" data-aos="fade-down-right" data-aos-duration="1000"
-                data-aos-delay="500">
-        </div>
-        <div class="absolute z-[2] top-[-2rem] right-[10%] rotate-[14deg]">
-            <img class="h-[140px]" src="/image/banner2.png" alt="" data-aos="fade-down-left" data-aos-duration="1000"
-                data-aos-anchor-placement="top-bottom" data-aos-delay="1000">
-        </div>
-        <div class="absolute z-[2] bottom-0 right-[20%] rotate-[-5deg]">
-            <img class="h-[100px]" src="/image/banner3.png" alt="" data-aos="fade-up-left" data-aos-duration="1000"
-            data-aos-delay="1500">
-        </div>
-      </div>
-   </section>
+   <Banner/>
    <section class="pain_point pt-[1rem] pb-[4rem] flex justify-center items-center">
       <div class="max-w-[1140px] relative flex justify-around items-center">
           <div class="pain" data-aos="fade-right" data-aos-duration="1200">
@@ -209,23 +193,7 @@ const HOW_TO_USE = [
                   </div>
                </div>
                <div class="w-1/3 px-[12px] flex items-start">
-                  <div class="swiper h-[285px]" id="carousel">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                           <!-- Slides -->
-                           <div class="swiper-slide">
-                              <div class="mask flex justify-center items-center bg-[#BFC783]">健康減油氣炸鍋</div>
-                              <img src="/image/pic/pot.png" class="d-block w-100" alt="...">
-                           </div>
-                           <div class="swiper-slide">
-                              <div class="maxk flex justify-center items-center bg-[#E0AB77]">新鮮食材在這裡</div>
-                              <img src="/image/pic/swiper-vegetable.jpg" class="d-block w-100" alt="...">
-                           </div>
-                        </div>
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                  </div>
+                  <Swiper />
                </div>
             </div>
       </div>
@@ -282,35 +250,33 @@ const HOW_TO_USE = [
             <div class="text-[36px] font-bold mb-[4rem]">使用流程</div>
             <div class="flex flex-wrap max-w-full">
                <div class="step col flex-[2_2_0%]" v-for="(step, index) in HOW_TO_USE"  :key="index">
-                  <div class="step-number flex">
+                  <div class="step-number flex relative" >
                         <img class="" :src="step.number" alt="">
                   </div>
-                  <div class="step-pic">
-                        <img :src="step.img" alt="">
-                        <div class="step-text">
+                  <div class="step-pic relative left-[3%] bottom-[16%] text-[24px] font-bold">
+                        <img :src="step.img" alt="" class="w-[170px] h-[150px] mb-[20px]">
+                        <div>
                            <p> {{ step.step }} </p>
                            <p>{{ step.action }}</p>
                         </div>
                   </div>
-                  <img src="/image/svg/caret-right-fill.svg" alt="">
+                  <img src="/image/svg/caret-right-fill.svg" alt=""
+                     v-if="index > 0"
+                     class="relative  bottom-[130px] text-[36px]">
                </div>
             </div>
       </div>
-   </section>   
+   </section>  
+   
+   <!-- 商家介紹 -->
+   <Kitchen />
+
+   <Partner />
 
 
 </template>
 
 <style lang="scss" scoped>
-   .banner p{
-      font-size: 1.25rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-      margin-bottom: 2rem;
-      text-align: center;
-      color: #555;
-      position: relative;
-   }
    .pain_point{
       .pain{
          border: 6px solid #DA7569;
@@ -385,17 +351,6 @@ const HOW_TO_USE = [
             display: flex;
             justify-content: center;
             align-items: center;
-         }
-      }
-      .swiper{
-         .mask{
-            opacity: 0.9;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            color: white;
-            font-size: 28px;
-            font-weight: bold;
          }
       }
       .rules{
